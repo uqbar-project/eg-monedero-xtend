@@ -4,6 +4,7 @@ import java.math.BigDecimal
 import java.util.Date
 import java.text.DateFormat;
 import org.omg.CORBA.UserException
+import ar.com.xtend.monedero.smell.exceptions.MontoNegativoException
 
 public abstract class Movimiento {
 	var Date fecha;
@@ -49,7 +50,8 @@ public abstract class Movimiento {
 
 	def validarMonto() {
 		if (this.getMonto().doubleValue() <= 0) {
-			throw new Exception(this.getMonto() + ": el monto a ingresar debe ser un valor positivo");
+			throw new MontoNegativoException(this.getMonto() + 
+				": el monto a ingresar debe ser un valor positivo");
 		}
 	}
 

@@ -4,6 +4,9 @@ import java.math.BigDecimal
 import java.util.ArrayList
 import java.util.List
 import java.util.Date
+import ar.com.xtend.monedero.smell.exceptions.SaldoMenorException
+import ar.com.xtend.monedero.smell.exceptions.MaximoExtraccionDiarioException
+import ar.com.xtend.monedero.smell.exceptions.MaximaCantidadDepositosException
 
 public class Cuenta {
 	val SALDO = "saldo";
@@ -53,7 +56,7 @@ public class Cuenta {
 
 	def validarSaldoDisponibleParaExtraer(BigDecimal cuanto) {
 		if (this.getSaldo().subtract(cuanto).doubleValue() < 0) {
-			throw new Exception("No puede sacar más de " + this.getSaldo() + " $");
+			throw new SaldoMenorException("No puede sacar más de " + this.getSaldo() + " $");
 		}
 	}
 
@@ -61,13 +64,13 @@ public class Cuenta {
 		var montoExtraidoHoy = this.getMontoExtraidoA(new Date());
 		var limite = new BigDecimal(MAXIMO_EXTRACCION_DIARIO).subtract(montoExtraidoHoy);
 		if (cuanto.doubleValue() > limite.doubleValue()) {
-			throw new Exception("No puede extraer más de $ " + MAXIMO_EXTRACCION_DIARIO + " diarios, límite: " + limite);
+			throw new MaximoExtraccionDiarioException("No puede extraer más de $ " + MAXIMO_EXTRACCION_DIARIO + " diarios, límite: " + limite);
 		}
 	}
 
 	def validarCantidadDeDepositosDiaria() {
 		if (this.getDepositos(new Date()).size() >= MAX_DEPOSITOS_EN_DIA) {
-			throw new Exception("Ya excedió los " + MAX_DEPOSITOS_EN_DIA + " depósitos diarios");
+			throw new MaximaCantidadDepositosException("Ya excedió los " + MAX_DEPOSITOS_EN_DIA + " depósitos diarios");
 		}
 	}
 
