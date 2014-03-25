@@ -1,6 +1,6 @@
 package ar.edu.monedero.domain
 
-import com.uqbar.commons.exceptions.BusinessException
+import ar.edu.monedero.exceptions.BusinessException
 import java.math.BigDecimal
 import org.uqbar.commons.model.ObservableUtils
 import org.uqbar.commons.utils.Observable
