@@ -2,14 +2,16 @@ package ar.edu.monedero.domain
 
 import ar.edu.monedero.exceptions.BusinessException
 import java.math.BigDecimal
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.model.ObservableUtils
 import org.uqbar.commons.utils.Observable
 
+@Accessors
 @Observable
 class MonederoModel {
 
-	@Property Monedero monedero
-	@Property String montoAIngresar
+	Monedero monedero
+	String montoAIngresar
 	
 	new(Monedero model) {
 		monedero = model

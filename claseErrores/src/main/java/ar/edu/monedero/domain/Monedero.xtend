@@ -2,13 +2,15 @@ package ar.edu.monedero.domain
 
 import ar.edu.monedero.exceptions.BusinessException
 import java.math.BigDecimal
+import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.model.Entity
 import org.uqbar.commons.utils.Observable
 
+@Accessors
 @Observable
 class Monedero extends Entity {
 
-	@Property BigDecimal monto
+	BigDecimal monto
 
 	new(double montoInicial) {
 		monto = new BigDecimal(montoInicial)
