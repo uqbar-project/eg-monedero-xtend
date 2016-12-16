@@ -8,7 +8,7 @@ Ejercicio del [monedero](https://docs.google.com/document/d/1vVW91adl0p-NxGNpe8f
 
 ## Cómo correr el ejemplo
 
-En el directorio raíz encontrarán el archivo MonederoApplication.launch que levanta la aplicación en [Arena](arena.uqbar-project.org), un framework didáctico que nos sirve como excusa para mostrar cómo se capturan los errores que lanza el negocio, ya que como vemos cuando un objeto de dominio lanza un error lo suele atrapar
+En el directorio raíz encontrarán el archivo [MonederoApplication.launch](MonederoApplication.launch) que levanta la aplicación en [Arena](arena.uqbar-project.org), un framework didáctico que nos sirve como excusa para mostrar cómo se capturan los errores que lanza el negocio, ya que como vemos cuando un objeto de dominio lanza un error lo suele atrapar
 
 * la interfaz de usuario
 * un test unitario
