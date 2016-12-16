@@ -17,7 +17,7 @@ En el directorio raíz encontrarán el archivo [MonederoApplication.launch](Mone
 ## Conceptos a ver
 
 * Manejo de errores
-* De yapa, se refactorizan algunas decisiones iniciales de diseño
+* De yapa, se refactorizan algunas decisiones iniciales de diseño en el branch [refactoring](https://github.com/uqbar-project/eg-monedero-xtend/tree/refactoring)
 
 
 
