@@ -1,6 +1,8 @@
 
 # Ejercicio Manejo de Errores - Monedero
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f58afbdb7c04e4f801bf29b39f08f03)](https://www.codacy.com/app/fernando-dodino/eg-monedero-xtend?utm_source=github.com&utm_medium=referral&utm_content=uqbar-project/eg-monedero-xtend&utm_campaign=badger)
+
 ![image](images/demo.gif) 
 
 ## Dominio y explicación
