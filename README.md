@@ -1,6 +1,8 @@
 
 # Ejercicio Manejo de Errores - Monedero
 
+[![Build Status](https://travis-ci.org/uqbar-project/eg-monedero-xtend.svg?branch=simple)](https://travis-ci.org/uqbar-project/eg-monedero-xtend) 
+
 ![image](images/demo.gif) 
 
 ## Dominio y explicación
