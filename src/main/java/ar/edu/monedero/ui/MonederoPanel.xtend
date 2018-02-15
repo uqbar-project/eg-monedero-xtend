@@ -10,8 +10,12 @@ import org.uqbar.arena.widgets.TextBox
 import org.uqbar.arena.windows.SimpleWindow
 import org.uqbar.arena.windows.WindowOwner
 
+import static extension org.uqbar.arena.xtend.ArenaXtendExtensions.*
+
 class MonederoPanel extends SimpleWindow<MonederoModel> {
 
+	static String MENSAJE_ERROR_PROGRAMA = "Ocurrió un error en la aplicación. Consulte al administrador"
+	
 	new(WindowOwner owner, MonederoModel model) {
 		super(owner, model)
 		title = "Monedero"
@@ -19,12 +23,20 @@ class MonederoPanel extends SimpleWindow<MonederoModel> {
 	}
 
 	override protected createFormPanel(Panel mainPanel) {
-		val form = new Panel(mainPanel)
-		form.layout = new ColumnLayout(2)
-		new Label(form).text = "Monto a ingresar"
-		new TextBox(form).bindValueToProperty("montoAIngresar")
-		new Label(form).text = "$ actual"
-		new Label(form).bindValueToProperty("montoActual")
+		new Panel(mainPanel) => [
+			layout = new ColumnLayout(2)
+			new Label(it).text = "Monto a ingresar"
+			// o new NumericField(it)
+			new TextBox(it) => [
+				width = 150
+				value <=> "montoAIngresar"
+			]
+			new Label(it).text = "$ actual"
+			new Label(it) => [
+				value <=> "montoActual"
+				width = 150
+			]
+		]
 	}
 
 	override protected void addActions(Panel actions) {
@@ -40,7 +52,7 @@ class MonederoPanel extends SimpleWindow<MonederoModel> {
 		} catch (BusinessException e) {
 			showWarning(e.message)
 		} catch (Exception e) {
-			showError("Ocurrió un error en la aplicación. Consulte al administrador")
+			showError(MENSAJE_ERROR_PROGRAMA)
 		}
 	}
 
@@ -50,7 +62,7 @@ class MonederoPanel extends SimpleWindow<MonederoModel> {
 		} catch (BusinessException e) {
 			showWarning(e.message)
 		} catch (Exception e) {
-			showError("Ocurrió un error en la aplicación. Consulte al administrador")
+			showError(MENSAJE_ERROR_PROGRAMA)
 		}
 	}
 	

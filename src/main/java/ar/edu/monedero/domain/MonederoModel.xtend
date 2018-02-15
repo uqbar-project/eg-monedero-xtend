@@ -3,8 +3,8 @@ package ar.edu.monedero.domain
 import ar.edu.monedero.exceptions.BusinessException
 import java.math.BigDecimal
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.uqbar.commons.model.ObservableUtils
-import org.uqbar.commons.utils.Observable
+import org.uqbar.commons.model.annotations.Dependencies
+import org.uqbar.commons.model.annotations.Observable
 
 @Accessors
 @Observable
@@ -19,7 +19,6 @@ class MonederoModel {
 	
 	def void inicializar() {
 		montoAIngresar = ""
-		ObservableUtils.firePropertyChanged(this, "montoActual", montoActual)
 	}
 	
 	def void sacar() {
@@ -40,6 +39,7 @@ class MonederoModel {
 		}
 	}
 	
+	@Dependencies("montoAIngresar")
 	def BigDecimal getMontoActual() {
 		monedero.monto
 	}
