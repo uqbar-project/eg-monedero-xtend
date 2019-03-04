@@ -13,24 +13,19 @@
 	<version>1.0-RELEASE</version>
 
 	<!-- agregamos repositorios de Uqbar -->
-	<profiles>
-		<profile>
-			<id>uqbar-wiki</id>
-			<repositories>
-				<repository>
-					<id>uqbar-wiki.org-releases</id>
-					<name>uqbar-wiki.org-releases</name>
-					<url>http://maven.uqbar.org/releases</url>
-				</repository>
-				<repository>
-					<snapshots />
-					<id>uqbar-wiki.org-snapshots</id>
-					<name>uqbar-wiki.org-snapshots</name>
-					<url>http://maven.uqbar.org/snapshots</url>
-				</repository>
-			</repositories>
-		</profile>
-	</profiles>
+	<repositories>
+		<repository>
+			<id>uqbar-wiki.org-releases</id>
+			<name>uqbar-wiki.org-releases</name>
+			<url>http://maven.uqbar.org/releases</url>
+		</repository>
+		<repository>
+			<snapshots />
+			<id>uqbar-wiki.org-snapshots</id>
+			<name>uqbar-wiki.org-snapshots</name>
+			<url>http://maven.uqbar.org/snapshots</url>
+		</repository>
+	</repositories>
 
 	<!-- Dependencias de Conexión a la Base de datos MySQL -->
 	<dependencies>
