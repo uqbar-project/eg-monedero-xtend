@@ -9,7 +9,7 @@ import ar.com.xtend.monedero.smell.exceptions.MaximaCantidadDepositosException
 import ar.com.xtend.monedero.smell.exceptions.MaximoExtraccionDiarioException
 import ar.com.xtend.monedero.smell.exceptions.SaldoMenorException
 
-public class Cuenta {
+class Cuenta {
 	val MAX_DEPOSITOS_EN_DIA = 3
 	val MAXIMO_EXTRACCION_DIARIO = 1000
 	

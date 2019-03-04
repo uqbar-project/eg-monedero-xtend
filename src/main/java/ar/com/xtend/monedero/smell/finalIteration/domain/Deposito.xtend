@@ -3,7 +3,7 @@ package ar.com.xtend.monedero.smell.finalIteration.domain
 import java.math.BigDecimal
 import java.util.Date
 
-public class Deposito extends Movimiento {
+class Deposito extends Movimiento {
 
 	new(Date fecha, BigDecimal monto) {
 		super(fecha, monto)

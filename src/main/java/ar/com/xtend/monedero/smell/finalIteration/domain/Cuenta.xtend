@@ -10,7 +10,7 @@ import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
 
 @Accessors
-public class Cuenta {
+class Cuenta {
 	val MAX_DEPOSITOS_EN_DIA = 3
 	val MAXIMO_EXTRACCION_DIARIO = 1000
 

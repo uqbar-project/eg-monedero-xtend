@@ -6,7 +6,7 @@ import java.util.Date
 import org.eclipse.xtend.lib.annotations.Accessors
 
 @Accessors
-public class Movimiento {
+class Movimiento {
 	Date fecha
 	BigDecimal monto
 	boolean esDeposito
@@ -61,7 +61,8 @@ public class Movimiento {
 				}
 			
 	}*/
-	def agregateA(Cuenta cuenta) {
+	
+	def void agregateA(Cuenta cuenta) {
 		cuenta.setSaldo(this.calcularValor(cuenta))
 		cuenta.agregarMovimiento(fecha, monto, esDeposito)
 	}

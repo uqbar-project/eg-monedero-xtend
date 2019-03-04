@@ -11,7 +11,7 @@ import java.util.List
 import org.eclipse.xtend.lib.annotations.Accessors
 
 @Accessors
-public class Cuenta {
+class Cuenta {
 	var BigDecimal saldo = new BigDecimal(0)
 	var List<Movimiento> movimientos
 
