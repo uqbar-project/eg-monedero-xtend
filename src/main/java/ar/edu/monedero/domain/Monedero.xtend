@@ -3,12 +3,9 @@ package ar.edu.monedero.domain
 import ar.edu.monedero.exceptions.BusinessException
 import java.math.BigDecimal
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.uqbar.commons.model.Entity
-import org.uqbar.commons.model.annotations.Observable
 
 @Accessors
-@Observable
-class Monedero extends Entity {
+class Monedero {
 
 	BigDecimal monto
 
